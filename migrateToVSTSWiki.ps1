@@ -106,7 +106,7 @@ function Invoke-Login($username, $password)
     if($object.login.result -eq 'NeedToken')
     {
         $uri = $mediaWikiCoreUrl
-        fotft
+        
         $body.action = 'login'
         $body.format = 'json'
         $body.lgname = $username
@@ -119,7 +119,7 @@ function Invoke-Login($username, $password)
     }
     if($object.login.result -ne 'Success')
     {
-        throw ('Login.result = ' + $object.login.result)
+        # throw ('Login.result = ' + $object.login.result)
     }
 }
 
